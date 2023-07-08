@@ -1,6 +1,8 @@
 import numpy as np
 import argparse
 
+import unittest
+
 # hay que generar una matrix con números de 0 a 9
 LIMITE_MINIMO = 0
 LIMITE_MAXIMO = 9
@@ -44,7 +46,6 @@ def generar_matriz_con_sumas(x, y):
     matriz_final = np.append(matriz_suma_columnas, matriz_suma_filas, axis=1)
 
     return matriz_final.tolist()
-
 
 
 #cuando usemos "matriz.py" como módulo en django no importará lo que viene a continuación
