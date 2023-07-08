@@ -5,12 +5,14 @@ from django.shortcuts import render, HttpResponse
 
 def home(request):
 
-    return HttpResponse ("Inicio")
+    return render(request, "matriz/base.html")
 
 def matriz(request):
 
-    return HttpResponse ("Matriz")
+    return render(request, "matriz/inicio.html")
+
+    return render(request, "matriz/matriz.html")
 
 def historico(request):
 
-    return HttpResponse ("Historico")
+    return render(request, "matriz/historico.html")
