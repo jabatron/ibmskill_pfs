@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        
+        {% load django_bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        {% bootstrap_messages %}
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+        
+        
+    </head>
+    <body>
+        <div class="container navbar">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/matriz/' %} active {% endif %}" href="{% url 'home' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/matriz/matriz/' %} active {% endif %}" href="{% url 'matriz' %}">Matriz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/matriz/historico/' %} active {% endif %}" href="{% url 'historico' %}">Historico</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+        
+        {% block content %} 
+        
+        {% endblock %}
+        
+ 
+</body>
+</html>

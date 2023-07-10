@@ -1,12 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-</head>
-<body>
-    Normas del programa
-    
-</body>
-</html>
+{% extends "matriz/_base.html" %}
+
+{% block title %} Enunciado {% endblock %}
+
+{% block content %}
+
+<div class="container border" >
+        
+    <div class="row">
+        
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <h1>Caso practico</h1>      
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Enunciado</h2>      
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>Escribir un programa en Python que genere una matriz de tamaño NxN y
+            la llene con números aleatorios entre 0 y 9. El programa deberá imprimir
+            la matriz generada y luego calcular la suma de los elementos de cada fila y
+            columna. Finalmente, deberá imprimir la suma de cada fila y columna.</p>
+            <p>El programa deberá incluir las siguientes características:</p>
+            <ul class="cuadrado">
+                <li>Generación de la matriz: El programa deberá generar una matriz
+                    cuadrada de tamaño NxN, donde N es un número entero ingresado
+                    por el usuario.</li>
+                <li>Rellenar la matriz con números aleatorios: El programa deberá
+                    rellenar la matriz con números aleatorios entre 0 y 9.</li>
+                <li>Imprimir la matriz: El programa deberá imprimir la matriz generada
+                    en pantalla.</li>
+                <li>Calcular la suma de cada fila y columna: El programa deberá
+                    calcular la suma de los elementos de cada fila y columna y
+                    almacenarlas en dos listas.</li>
+                <li>Imprimir la suma de cada fila y columna: El programa deberá
+                    imprimir en pantalla la suma de cada fila y columna.</li>
+            </ul>
+
+            Además, se sugiere que el programa incluya manejo de excepciones en
+            caso de que el usuario ingrese un valor no válido para N, también que
+            incluya comentarios para explicar el código y finalmente que se hagan los
+            test unitarios necesarios para asegurar que el resultado es el esperado.               
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}
+
+

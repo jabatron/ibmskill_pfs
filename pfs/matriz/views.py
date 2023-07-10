@@ -5,11 +5,9 @@ from django.shortcuts import render, HttpResponse
 
 def home(request):
 
-    return render(request, "matriz/base.html")
+    return render(request, "matriz/inicio.html")
 
 def matriz(request):
-
-    return render(request, "matriz/inicio.html")
 
     return render(request, "matriz/matriz.html")
 
