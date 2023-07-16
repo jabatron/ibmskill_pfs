@@ -35,10 +35,20 @@
                 </li>
             </ul>
         </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col justify-content-center">
+                    <div class="table-responsive">
+                        {% block content %} 
+                        
+                        {% endblock %}
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>        
         
-        {% block content %} 
-        
-        {% endblock %}
         
  
 </body>
