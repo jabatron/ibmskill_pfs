@@ -27,7 +27,7 @@ def generar_matriz (x, y):
     suma_filas_matriz    = matriz.sum(axis=1)
 
     # Devuelve una tupla con la matrix, una lista con la suma de las columnas y otra lista con la suma de las filas
-    return list(matriz), list(suma_columnas_matriz), list(suma_filas_matriz)
+    return matriz.tolist(), list(suma_columnas_matriz), list(suma_filas_matriz)
 
 def generar_matriz_con_sumas(x, y):
     # genera una matrix de x filas por y columnas con números aleatorios entre limite minimo y máximo
