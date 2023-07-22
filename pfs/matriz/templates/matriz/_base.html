@@ -15,6 +15,7 @@
 
         {% load static %}
         <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+        <link rel="shortcut icon" type="image/ico" href="{% static '/image/favicon.ico' %}" >
         
         
     </head>
@@ -22,33 +23,20 @@
         <div class="container navbar">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/matriz/' %} active {% endif %}" href="{% url 'home' %}">Inicio</a>
+                    <a class="nav-link {% if request.path == '/' %} active {% endif %}" href="{% url 'home' %}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/matriz/matriz/' %} active {% endif %}" href="{% url 'matriz' %}">Matriz</a>
+                    <a class="nav-link {% if request.path == '/matriz/' %} active {% endif %}" href="{% url 'matriz' %}">Matriz</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/matriz/historico/' %} active {% endif %}" href="{% url 'historico' %}">Historico</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link {% if request.path == '/historico/' %} active {% endif %} disabled" href="{% url 'historico' %}">Historico</a>
                 </li>
             </ul>
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col justify-content-center">
-                    <div class="table-responsive">
-                        {% block content %} 
-                        
-                        {% endblock %}
-                    </div>
-                    
+        </div>       
 
-                </div>
-            </div>
-        </div>        
-        
+        {% block content %} 
+                
+        {% endblock %}        
         
  
 </body>
